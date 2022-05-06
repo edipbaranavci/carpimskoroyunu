@@ -1,0 +1,2 @@
+# carpimskoroyunu
+ Çarpım Skor Oyunu
