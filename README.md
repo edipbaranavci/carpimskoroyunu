@@ -10,3 +10,5 @@
 <li>Skorları tutan yerel bir veri tabanına ihtiyacımız olduğundan Hive kullandım.</li>
 </ul>
 <h4>Uygulama Resimleri</h4>
+<img src="https://user-images.githubusercontent.com/33373519/167050016-7616361f-a8dc-4b34-90d4-fce68d6012f4.jpg" />
+<a href="https://twitter.com/edp_brn">Twitter Adresim.</a>
