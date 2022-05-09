@@ -11,4 +11,5 @@
 </ul>
 <h4>Uygulama Resimleri</h4>
 <img width="432" height="512" src="https://user-images.githubusercontent.com/33373519/167486444-d2af1232-ee6d-47de-b92d-2304c4f42264.jpg" />
-<a href="https://twitter.com/edp_brn">Twitter Adresim.</a>
+<a href="https://twitter.com/edp_brn">Twitter Adresim.</a><br>
+<a href="https://play.google.com/store/apps/details?id=com.ekabav.carpimskoroyunu">Google Play.</a>
