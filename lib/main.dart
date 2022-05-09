@@ -1,24 +1,23 @@
-import 'package:carpimskoroyunu/pages/first_login_screen.dart';
+import 'package:carpimskoroyunu/models/get_datas.dart';
+import 'package:carpimskoroyunu/pages/first_login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:hive_flutter/adapters.dart';
-import 'pages/inventory_screen.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'pages/login_page.dart';
 
 _widgetKontrol() async {
-  Box _box = await Hive.openBox('Skors');
-  if (_box.get(0) != null) {
-    firstScreen = const InventoryScreen();
+  if (Datas().widgetKontrol() == true) {
+    firstScreen = InventoryScreen();
   } else {
     firstScreen = const FirstLoginScreen();
   }
 }
 
 Future<void> main() async {
-  await Hive.initFlutter();
-  var dir = await getApplicationDocumentsDirectory();
-  String _dosyaYolu = dir.path + '/EKABAV';
-  Hive.init(_dosyaYolu);
+  await GetStorage.init();
+  WidgetsFlutterBinding.ensureInitialized();
+  await MobileAds.instance.initialize();
   await _widgetKontrol();
   runApp(const MyApp());
 }
@@ -38,9 +37,11 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.amber,
         fontFamily: 'RussoOne',
         appBarTheme: const AppBarTheme(
-            iconTheme: IconThemeData(color: Colors.amber),
-            backgroundColor: Colors.transparent,
-            elevation: 0),
+          titleTextStyle: TextStyle(color: Colors.black),
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.amber),
+          backgroundColor: Colors.transparent,
+        ),
         primarySwatch: Colors.blue,
       ),
       home: firstScreen,

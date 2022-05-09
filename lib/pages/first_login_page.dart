@@ -1,5 +1,5 @@
-import 'package:carpimskoroyunu/models/hive_datas.dart';
-import 'package:carpimskoroyunu/pages/inventory_screen.dart';
+import 'package:carpimskoroyunu/models/get_datas.dart';
+import 'package:carpimskoroyunu/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -45,8 +45,8 @@ class _StartButton extends StatefulWidget {
 
 class _StartButtonState extends State<_StartButton> {
   void _login() {
-    HiveDatas().firstLogin();
-    Get.offAll(() => const InventoryScreen(), transition: Transition.fadeIn);
+    Datas().firstLogin();
+    Get.offAll(() => InventoryScreen(), transition: Transition.fadeIn);
   }
 
   @override

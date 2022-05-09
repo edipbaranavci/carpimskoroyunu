@@ -1,7 +1,7 @@
-import 'package:carpimskoroyunu/pages/hard_game_screen.dart';
-import 'package:carpimskoroyunu/pages/normal_game_screen.dart';
+import 'package:carpimskoroyunu/pages/hard_game_page.dart';
+import 'package:carpimskoroyunu/pages/normal_game_page.dart';
 
-import '../pages/easy_game_screen.dart';
+import '../pages/easy_game_page.dart';
 
 class GameScreensAlerts {
   final int screenCount;
